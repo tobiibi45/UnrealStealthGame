@@ -69,4 +69,34 @@
       <Filter>Source\FPSGame\Public</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\FPSGame\Public\FPSObjectiveActor.h">
+      <Filter>Source\FPSGame\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPSGame\Public\Challenges\FPSBlackHole.h">
+      <Filter>Source\FPSGame\Public\Challenges</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\FPSGame\Public\FPSExtractionZone.h">
+      <Filter>Source\FPSGame\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\FPSGame\Private\FPSObjectiveActor.cpp">
+      <Filter>Source\FPSGame\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPSGame\Private\Challenges\FPSBlackHole.cpp">
+      <Filter>Source\FPSGame\Private\Challenges</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\FPSGame\Private\FPSExtractionZone.cpp">
+      <Filter>Source\FPSGame\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source\FPSGame\Public\Challenges">
+      <UniqueIdentifier>{f545b744-22b7-4b2d-8389-596a9e824dd3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\FPSGame\Private\Challenges">
+      <UniqueIdentifier>{c28ba928-a0e9-4d38-96ca-9a07c408fd3a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>

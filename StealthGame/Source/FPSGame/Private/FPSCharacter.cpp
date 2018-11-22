@@ -6,11 +6,12 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Kismet/GameplayStatics.h"
-
+#include <iostream>
+#include <utility>
 
 AFPSCharacter::AFPSCharacter()
 {
-	// Create a CameraComponent	
+	// Create a CameraComponent
 	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("FirstPersonCamera"));
 	CameraComponent->SetupAttachment(GetCapsuleComponent());
 	CameraComponent->RelativeLocation = FVector(0, 0, BaseEyeHeight); // Position the camera
@@ -43,6 +44,28 @@ void AFPSCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+}
+
+bool AFPSCharacter::InsertItemInIventory(std::string name, int quantity)
+{
+	auto iterator = m_uIventory.find(name);
+	if (iterator != m_uIventory.end())
+	{
+		return false;
+	}
+
+	m_uIventory.insert(std::make_pair(name, quantity));
+	return true;
+}
+
+std::string AFPSCharacter::GetItemInIventory(std::string name)
+{
+	auto iterator = m_uIventory.find(name);
+	if (iterator != m_uIventory.end())
+	{
+		return iterator->first;
+	}
+	return nullptr;
 }
 
 

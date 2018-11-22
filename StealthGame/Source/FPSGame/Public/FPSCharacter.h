@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include <unordered_map>
 #include "FPSCharacter.generated.h"
 
 class UInputComponent;
@@ -48,8 +49,11 @@ public:
 	UPROPERTY(EditDefaultsOnly, Category = "Gameplay")
 	UAnimSequence* FireAnimation;
 
+	UPROPERTY(BluePrintReadOnly, Category = "Gameplay")
+	bool bIsCarryingObjective;
+
 protected:
-	
+
 	/** Fires a projectile. */
 	void Fire();
 
@@ -58,6 +62,9 @@ protected:
 
 	/** Handles strafing movement, left and right */
 	void MoveRight(float Val);
+
+	/** Handles storing items in the inventory */
+	std::unordered_map<std::string, int> m_uIventory;
 
 	virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
 
@@ -68,5 +75,10 @@ public:
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return CameraComponent; }
 
+	/** Takes the params and stores the items in the inventory */
+	bool InsertItemInIventory(std::string name, int quantity);
+
+	/** Gets the items that are stored in the inventory */
+	std::string GetItemInIventory(std::string name);
 };
 
