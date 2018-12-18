@@ -655,6 +655,7 @@
     <ClInclude Include="..\..\Source\FPSGame\FPSGame.h" />
     <ClCompile Include="..\..\Source\FPSGame\Private\Challenges\FPSBlackHole.cpp" />
     <ClCompile Include="..\..\Source\FPSGame\Private\Challenges\FPSLaunchPad.cpp" />
+    <ClCompile Include="..\..\Source\FPSGame\Private\FPSAIGuard.cpp" />
     <ClCompile Include="..\..\Source\FPSGame\Private\FPSCharacter.cpp" />
     <ClCompile Include="..\..\Source\FPSGame\Private\FPSExtractionZone.cpp" />
     <ClCompile Include="..\..\Source\FPSGame\Private\FPSGameMode.cpp" />
@@ -663,6 +664,7 @@
     <ClCompile Include="..\..\Source\FPSGame\Private\FPSProjectile.cpp" />
     <ClInclude Include="..\..\Source\FPSGame\Public\Challenges\FPSBlackHole.h" />
     <ClInclude Include="..\..\Source\FPSGame\Public\Challenges\FPSLaunchPad.h" />
+    <ClInclude Include="..\..\Source\FPSGame\Public\FPSAIGuard.h" />
     <ClInclude Include="..\..\Source\FPSGame\Public\FPSCharacter.h" />
     <ClInclude Include="..\..\Source\FPSGame\Public\FPSExtractionZone.h" />
     <ClInclude Include="..\..\Source\FPSGame\Public\FPSGameMode.h" />

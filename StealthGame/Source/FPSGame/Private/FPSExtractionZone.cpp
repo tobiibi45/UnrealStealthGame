@@ -46,7 +46,7 @@ void AFPSExtractionZone::HandleOverlap(UPrimitiveComponent* OverlappedComponent,
 		if (GM)
 		{
 			UGameplayStatics::PlaySound2D(this, ObjectiveCompletedSound);
-			GM->CompleteMission(MyPawn);
+			GM->CompleteMission(MyPawn, true);
 		}
 	}
 	else
